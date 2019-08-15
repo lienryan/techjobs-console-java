@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -50,6 +51,9 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
+
+        //Bonus Missions: Returning a copy of allJobs
+        ArrayList<HashMap<String, String>> allJobsClone = (ArrayList<HashMap<String, String>>) allJobs.clone();
 
         return allJobs;
     }
